@@ -30,9 +30,9 @@ class HomeController extends Controller
         return view('home')->with('details', $user_details);
     }
 
-    public function edit($id)
+    public function edit(Request $request)
     {
-        $user_details = UserDetails::where('user_id', $id)->first();
+        $user_details = UserDetails::where('user_id', $request->user_id)->first();
         return view('edit')->with('details', $user_details);
     }
 

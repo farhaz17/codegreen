@@ -28,5 +28,5 @@ Route::post('/logout', 'Auth\LoginController@destroy')->name('logout');
 Route::post('/verify', 'Auth\VerificationController@verify')->name('verify');
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/edit/{id}', 'HomeController@edit')->name('edit');
+Route::post('/edit', 'HomeController@edit')->name('edit');
 Route::post('/update', 'HomeController@update')->name('update');
